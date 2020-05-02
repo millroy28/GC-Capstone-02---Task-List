@@ -171,6 +171,20 @@ namespace GC_Capstone_02___Task_List
             int[] distinctIDs = taskIDs.Distinct().ToArray();
             return distinctIDs;
         }
+        public static int[] GetIncompleteTaskIDs (List<Task> tasks)
+        {
+            List<int> taskIDs = new List<int>();
+            foreach (Task task in tasks)
+            {
+                if (!task.taskCompletionStatus)
+                {
+                    taskIDs.Add(task.taskID);
+                }
+            }
+            int[] distinctIDs = taskIDs.Distinct().ToArray();
+            return distinctIDs;
+        }
+
         public static List<Task> ChangeAssignment (List<Task> tasks, int taskID, string newTeammate, string user)
         {
             foreach (Task task in tasks)

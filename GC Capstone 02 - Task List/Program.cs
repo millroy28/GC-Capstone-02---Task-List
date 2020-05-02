@@ -166,13 +166,13 @@ namespace GC_Capstone_02___Task_List
                     Task.PrintTaskToConsole(task);
                 }
             }
+
             Console.WriteLine();
             Console.WriteLine("     Mark a task complete:");
             Console.WriteLine("     =====================");
-            
 
             //Prompts for user integer and checks against live task IDs
-            int[] taskIDs = Task.GetTaskIDs(taskList);
+            int[] taskIDs = Task.GetIncompleteTaskIDs(taskList);
             int choice = 0;
             bool validInput = false;
             while (!validInput)
@@ -262,7 +262,26 @@ namespace GC_Capstone_02___Task_List
             while(check)
             { 
                 int taskChoice = ChooseTaskToComplete(user, taskList);
+                SetConsole(user);
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine();
+                Console.WriteLine("     Mark a task complete:");
+                Console.WriteLine("     =====================");
+                Console.WriteLine();
+                Console.ResetColor();
+
+                foreach (Task task in taskList)
+                {
+                    if (task.TaskID == taskChoice)
+                    {
+                        Task.PrintTaskDisplayHeader();
+                        Task.PrintTaskToConsole(task);
+                    }
+                }
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine();
                 check = GetYesOrNo($"Are you sure you want to mark Task {taskChoice} complete? y/n: ");
+                Console.ResetColor();
                 if(check)
                 {
                     taskList = Task.MarkComplete(taskList, taskChoice, user);
@@ -280,7 +299,26 @@ namespace GC_Capstone_02___Task_List
             while(check)
             { 
                 int taskChoice = ChooseTaskToDelete(user, taskList);
+                SetConsole(user);
                 Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine();
+                Console.WriteLine("     Delete a task:");
+                Console.WriteLine("     ==============");
+                Console.WriteLine();
+                Console.ResetColor();
+
+                foreach (Task task in taskList)
+                {
+                    if (task.TaskID == taskChoice)
+                    {
+                        Task.PrintTaskDisplayHeader();
+                        Task.PrintTaskToConsole(task);
+                    }
+                }
+
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine();
                 Console.WriteLine($"Are you sure you want to delete task {taskChoice}?");
                 Console.ResetColor();
                 check = GetYesOrNo("This cannot be undone... y/n: ");
