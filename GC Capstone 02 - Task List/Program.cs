@@ -85,7 +85,7 @@ namespace GC_Capstone_02___Task_List
             Console.WriteLine();
 
 
-            int nextTaskID = taskList.Count + deletedTasks.Count;   //Avoids duplicate task IDs due to deleted tasks being removed from main list
+            int nextTaskID = taskList.Count + deletedTasks.Count + 1;   //Avoids duplicate task IDs due to deleted tasks being removed from main list, +1 because 1 indexed
             string name = GetUserString("Enter the name of the person to whom this task will be assigned: ");
             string description = GetUserString("Enter the task to be completed: ");
             
@@ -131,7 +131,7 @@ namespace GC_Capstone_02___Task_List
                 switch(fieldChoice)
                 {
                     case 1:
-                        string newTeammate = GetUserString("Please enter a new tammate to assign this task to: ");
+                        string newTeammate = GetUserString("Please enter a new teammate to assign this task to: ");
                         taskList = Task.ChangeAssignment(taskList, taskChoice, newTeammate, user);  
                         break;
                     case 2:
@@ -445,12 +445,12 @@ namespace GC_Capstone_02___Task_List
         {
             List<Task> tasks = new List<Task>()
             {
-                new Task(0,"Roy Miller", "Create task list", DateTime.Parse("05/04/2020"), true, "Roy", DateTime.Parse("05/01/2020")),
-                new Task(1,"Amy Ansel", "New water cooler", DateTime.Parse("05/15/2020"), false, "Mary", DateTime.Parse("05/01/2020")),
-                new Task(4,"Mary Wentz", "Update birthday calendar", DateTime.Parse("05/08/2020"),false, "Mary", DateTime.Parse("05/01/2020")),
-                new Task(5,"Mary Wentz", "Test task tracker", DateTime.Parse("05/08/2020"), true, "Roy", DateTime.Parse("05/01/2020")),
-                new Task(7,"Ando Clandier", "Scan last year's invoices", DateTime.Parse("06/16/2020"),false, "Mary", DateTime.Parse("05/01/2020")),
-                new Task(8,"Ananda Blonde", "Find new vendor for signage", DateTime.Parse("07/03/2020"),false, "Mary", DateTime.Parse("05/01/2020"))
+                new Task(1,"Roy Miller", "Create task list", DateTime.Parse("05/04/2020"), true, "Roy", DateTime.Parse("05/01/2020")),
+                new Task(2,"Amy Ansel", "New water cooler", DateTime.Parse("05/15/2020"), false, "Mary", DateTime.Parse("05/01/2020")),
+                new Task(5,"Mary Wentz", "Update birthday calendar", DateTime.Parse("05/08/2020"),false, "Mary", DateTime.Parse("05/01/2020")),
+                new Task(6,"Mary Wentz", "Test task tracker", DateTime.Parse("05/08/2020"), true, "Roy", DateTime.Parse("05/01/2020")),
+                new Task(8,"Ando Clandier", "Scan last year's invoices", DateTime.Parse("06/16/2020"),false, "Mary", DateTime.Parse("05/01/2020")),
+                new Task(9,"Ananda Blonde", "Find new vendor for signage", DateTime.Parse("07/03/2020"),false, "Mary", DateTime.Parse("05/01/2020"))
             };
             return tasks;
         }
@@ -458,9 +458,9 @@ namespace GC_Capstone_02___Task_List
         {
             List<Task> deletedTasks = new List<Task>()
             {
-                new Task(2,"Cranny Hamelson", "Purchase scanner", DateTime.Parse("05/08/2020"),false, "Mary", DateTime.Parse("05/01/2020")),
-                new Task(3,"Cranny Hamelson", "Find new vendor for signage", DateTime.Parse("07/03/2020"), false,"Mary", DateTime.Parse("05/01/2020")),
-                new Task(6,"Mary Wentz", "Fire Cranny", DateTime.Parse("05/08/2020"),false, "Mary", DateTime.Parse("05/01/2020"))
+                new Task(3,"Cranny Hamelson", "Purchase scanner", DateTime.Parse("05/08/2020"),false, "Mary", DateTime.Parse("05/01/2020")),
+                new Task(4,"Cranny Hamelson", "Find new vendor for signage", DateTime.Parse("07/03/2020"), false,"Mary", DateTime.Parse("05/01/2020")),
+                new Task(7,"Mary Wentz", "Fire Cranny", DateTime.Parse("05/08/2020"),false, "Mary", DateTime.Parse("05/01/2020"))
             };
             return deletedTasks;
         }
