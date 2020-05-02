@@ -1,0 +1,13 @@
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\bin\Debug\netcoreapp3.1\GC Capstone 02 - Task List.exe
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\bin\Debug\netcoreapp3.1\GC Capstone 02 - Task List.deps.json
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\bin\Debug\netcoreapp3.1\GC Capstone 02 - Task List.runtimeconfig.json
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\bin\Debug\netcoreapp3.1\GC Capstone 02 - Task List.runtimeconfig.dev.json
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\bin\Debug\netcoreapp3.1\GC Capstone 02 - Task List.dll
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\bin\Debug\netcoreapp3.1\GC Capstone 02 - Task List.pdb
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\obj\Debug\netcoreapp3.1\GC Capstone 02 - Task List.csprojAssemblyReference.cache
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\obj\Debug\netcoreapp3.1\GC Capstone 02 - Task List.csproj.CoreCompileInputs.cache
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\obj\Debug\netcoreapp3.1\GC Capstone 02 - Task List.AssemblyInfoInputs.cache
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\obj\Debug\netcoreapp3.1\GC Capstone 02 - Task List.AssemblyInfo.cs
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\obj\Debug\netcoreapp3.1\GC Capstone 02 - Task List.dll
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\obj\Debug\netcoreapp3.1\GC Capstone 02 - Task List.pdb
+C:\Users\millr\source\repos\GC Capstone 02 - Task List\GC Capstone 02 - Task List\obj\Debug\netcoreapp3.1\GC Capstone 02 - Task List.genruntimeconfig.cache
